@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_Activity"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/lilita"
+        android:text="Inicio de sesion"
+        android:textSize="27sp"
+       android:layout_gravity="center_horizontal"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/edtUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Usuario" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/edtContraseña"
+        android:inputType="numberPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Contraseña" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar secion"
+        android:id="@+id/btnIniciarSecion"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿No estas registrado?"
+        android:fontFamily="@font/lilita"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/txtRegistrarce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrate aqui!"
+        android:textColor="#0000ff"
+        android:gravity="center"/>
+</LinearLayout>

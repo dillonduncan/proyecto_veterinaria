@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvControles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtIdControl"
+                android:gravity="center"
+                android:hint="ID"
+                android:padding="5dp"
+                android:fontFamily="@font/lilita"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/lilita"
+                android:gravity="center"
+                android:hint="Mascota"
+                android:padding="5dp"/>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lilita"
+                android:gravity="center"
+                android:hint="Vacuna"
+                android:padding="5dp" />
+            <Button
+                android:id="@+id/btnBorrarControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/lilita"
+                android:padding="5dp"
+                android:text="Borrar" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registros_Principal_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <Button
+            android:id="@+id/btnRegistrarRoles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="250dp"
+            android:height="60dp"
+            android:text="Registrar Roles"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="74dp" />
+        <Button
+            android:id="@+id/btnRegistrarUsuarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="250dp"
+            android:height="60dp"
+            android:text="Registrar Usuarios"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="74dp" />
+        <Button
+            android:id="@+id/btnRgstrMascota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="250dp"
+            android:height="60dp"
+            android:text="Registrar Mascotas"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="74dp" />
+
+        <Button
+            android:id="@+id/btnRgstrTipo_mascotas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="250dp"
+            android:height="60dp"
+            android:text="Registrar Tipos Mascotas"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="74dp" />
+
+        <Button
+            android:id="@+id/btnRgstrRaza_mascotas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="250dp"
+            android:height="60dp"
+            android:text="Registrar Raza Mascotas"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="74dp" />
+
+        <Button
+            android:id="@+id/btnRgstr_Vacuna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="250dp"
+            android:height="60dp"
+            android:text="Registrar Vacunas"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="74dp" />
+        <Button
+            android:id="@+id/btnControlVacunas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="250dp"
+            android:height="60dp"
+            android:text="Registrar Controles"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="74dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
