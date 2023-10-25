@@ -42,14 +42,17 @@ class login_Activity : AppCompatActivity() {
                         if (idContraseñaUsuario==idNombreUsuario){
                             startActivity(Intent(this@login_Activity,Registros_Principal_Activity::class.java))
                         }
-                        usuario=DB.ObtenerDB(this@login_Activity).UsuarioDao().ObtenerUsuarioForid(idNombreUsuario)
-                        Toast.makeText(this@login_Activity, "$usuario", Toast.LENGTH_SHORT).show()
+                      //  usuario=DB.ObtenerDB(this@login_Activity).UsuarioDao().ObtenerUsuarioForid(idNombreUsuario)
+                        //Toast.makeText(this@login_Activity, "$usuario", Toast.LENGTH_SHORT).show()
                        /* else if (idContraseñaUsuario!=idNombreUsuario){
                             binding.edtContraseA.error="Usuario o contraseña incorrectos"
                             binding.edtContraseA.setText("")
                         }*/
                         //buscar el id del usuario para verificar la contraseña coin el mismo id
                         //usuario tiene el mismo id de la contraseña
+                    }
+                    if (idNombreUsuario.toInt()!=0){
+                        usuario=DB.ObtenerDB(this@login_Activity).UsuarioDao().ObtenerUsuarioForid(idNombreUsuario)
                     }
                     /*if (it.id==idNombreUsuario){
                         if (binding.edtUsuario.text.isNotEmpty() && it.nombre!=binding.edtUsuario.text.toString()){
@@ -69,6 +72,22 @@ class login_Activity : AppCompatActivity() {
                     if(binding.edtContraseA.text.isEmpty()){
                         binding.edtContraseA.error="Campo Obligatorio"
                     }
+                    if (binding.edtUsuario.text.isNotEmpty() && idNombreUsuario.toInt()==0){
+                        binding.txtLogIncorretco.text="Usuario o contraseña incorretos"
+                        Toast.makeText(this@login_Activity, "$idNombreUsuario", Toast.LENGTH_SHORT).show()
+                        //binding.edtContraseA.setText("")
+                    }
+                    if (binding.edtContraseA.text.isNotEmpty() && idContraseñaUsuario.toInt()==0){
+                        //binding.edtContraseA.setText("")
+                        Toast.makeText(this@login_Activity, "$idContraseñaUsuario", Toast.LENGTH_SHORT).show()
+                        binding.txtLogIncorretco.text="Usuario o contraseña incorretos"
+                    }
+                  /*  if (binding.edtUsuario.text.isNotEmpty() && usuario.nombre!=binding.edtUsuario.text.toString()){
+                        binding.edtUsuario.error="Usuario incorrecto"
+                    }
+                    if (binding.edtContraseA.text.isNotEmpty() && usuario.contrasena!=binding.edtContraseA.text.toString().toInt()){
+                        binding.edtContraseA.error="Contraseña incorrecta"
+                    }*/
                     /*if(binding.edtUsuario.text.isNotEmpty() && binding.edtUsuario.text.toString()!=it.nombre){
                         binding.edtUsuario.error="Usuario incorrecto"
                     }

@@ -76,7 +76,7 @@ class Registro_Usuario_Activity : AppCompatActivity(),UsuariosAdaptadorListener 
     fun AgregarUsuario(usuario: Usuario){
         lifecycleScope.launch {
             DB.ObtenerDB(this@Registro_Usuario_Activity).UsuarioDao().InsertarUsuario(usuario)
-            ObtenerUsuario()
+           // ObtenerUsuario()
             LimpiarCampos()
         }
     }
