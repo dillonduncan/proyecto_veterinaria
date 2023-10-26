@@ -10,7 +10,7 @@ class Registros_Principal_Activity : AppCompatActivity() {
     lateinit var binding: ActivityRegistrosPrincipalBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityRegistrosPrincipalBinding.inflate(layoutInflater)
+        binding = ActivityRegistrosPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
         RegistroMascota()
         RegistroRaza()
@@ -19,6 +19,15 @@ class Registros_Principal_Activity : AppCompatActivity() {
         RegistroRoles()
         RegistroUsuario()
         RegistrarControles()
+        LlenarDatosUser()
+        CerrarSesion()
+    }
+    fun LlenarDatosUser(){
+        binding.txtNombreUsuario.text=login_Activity.usuario.nombre
+        binding.txtCorreoUsuario.text=login_Activity.usuario.correo
+    }
+    fun CerrarSesion(){
+        binding.txtCerrarSesion.setOnClickListener { startActivity(Intent(this@Registros_Principal_Activity,login_Activity::class.java)) }
     }
     fun RegistrarControles()=binding.btnControlVacunas.setOnClickListener { startActivity(Intent(this@Registros_Principal_Activity,Registrar_Control_Vacunas_Activity::class.java)) }
     fun RegistroRoles()=binding.btnRegistrarRoles.setOnClickListener { startActivity(Intent(this@Registros_Principal_Activity,Registrar_Roles_Activity::class.java)) }
