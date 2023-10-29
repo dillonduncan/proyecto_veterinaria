@@ -7,10 +7,8 @@ import com.example.veterinaria.DataBase.Entities.Roles
 
 @Dao
 interface RolesDao {
-    @Query("SELECT id FROM tabla_roles WHERE nombre_rol=:user")
-    suspend fun ObtenerUser(user:String):Long
-    @Query("SELECT id FROM tabla_roles WHERE nombre_rol=:admin")
-    suspend fun ObtenerAdmin(admin:String):Long
+    @Query("SELECT id FROM tabla_roles WHERE nombre_rol=:nameRol")
+    suspend fun ObtenerIdRolForName(nameRol:String):Long
     @Query("SELECT * FROM ${Roles.TABLE_NAME}")
     suspend fun ObtenerTodoRoles():MutableList<Roles>
     @Insert

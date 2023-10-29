@@ -25,6 +25,12 @@ class UsuariosAdaptador(
         holder.txtCorreoUsuario.text=usuarios.correo
         holder.txtContraseñaUsuarios.text=usuarios.contrasena.toString()
         holder.txtRol.text=usuarios.id_rol.toString()
+        holder.btnBorrar.setOnClickListener {
+            listener.onDeleteItemClick(usuarios)
+        }
+        holder.cvUsuario.setOnClickListener {
+            listener.onEditItemClick(usuarios)
+        }
     }
     inner class ViewHolder(ItemView:View):RecyclerView.ViewHolder(ItemView) {
         val cvUsuario=itemView.findViewById<CardView>(R.id.cvUsuarios)

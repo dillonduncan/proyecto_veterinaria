@@ -135,6 +135,7 @@ class Registro_Usuario_Activity : AppCompatActivity(),UsuariosAdaptadorListener 
         lifecycleScope.launch {
             DB.ObtenerDB(this@Registro_Usuario_Activity).UsuarioDao().EliminarUsuario(usuario.id)
             adaptador.notifyDataSetChanged()
+            ObtenerUsuario()
             Toast.makeText(this@Registro_Usuario_Activity, "Eliminado con Exito", Toast.LENGTH_SHORT).show()
         }
     }

@@ -3,15 +3,22 @@ package com.example.veterinaria
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.lifecycleScope
+import com.example.veterinaria.DataBase.DB
 import com.example.veterinaria.databinding.ActivityRegistroVacunasBinding
 import com.example.veterinaria.databinding.ActivityRegistrosPrincipalBinding
+import kotlinx.coroutines.launch
 
 class Registros_Principal_Activity : AppCompatActivity() {
     lateinit var binding: ActivityRegistrosPrincipalBinding
+    var idRolUsuario:Long=0
+    var idAdmin:Long=0
+    var idUser:Long=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrosPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        ObtenerValidarRolUsuario()
         RegistroMascota()
         RegistroRaza()
         RegistroTipo()
@@ -21,6 +28,17 @@ class Registros_Principal_Activity : AppCompatActivity() {
         RegistrarControles()
         LlenarDatosUser()
         CerrarSesion()
+    }
+    fun ObtenerValidarRolUsuario(){
+        idRolUsuario=login_Activity.idRolUsuario
+        lifecycleScope.launch {
+            idAdmin=DB.ObtenerDB(this@Registros_Principal_Activity).RolesDao().ObtenerIdRolForName("Administrador")
+            idUser=DB.ObtenerDB(this@Registros_Principal_Activity).RolesDao().ObtenerIdRolForName("Usuario")
+        }
+        if (idRolUsuario==idUser){
+            binding.btnRegistrarRoles.isEnabled = false
+            binding.btnRegistrarUsuarios.isEnabled=false
+        }
     }
     fun LlenarDatosUser(){
         binding.txtNombreUsuario.text=login_Activity.usuario.nombre
