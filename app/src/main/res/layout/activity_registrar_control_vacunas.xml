@@ -77,14 +77,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_controles"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
+        android:layout_height="385dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
         android:elevation="20dp"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMostrar"
         tools:listitem="@layout/ly_mostrar_control_vacunas" />
 </androidx.constraintlayout.widget.ConstraintLayout>
