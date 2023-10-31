@@ -24,6 +24,7 @@ class Registrar_Roles_Activity : AppCompatActivity(),RolesAdaptadorListener {
         setContentView(binding.root)
         binding.rvRoles.layoutManager=LinearLayoutManager(this)
         ValidarGuardar()
+        binding.btnVerRoles.setOnClickListener { ObtenerRoles() }
     }
     fun ValidarGuardar(){
         binding.btnAgregarRoles.setOnClickListener {
@@ -54,7 +55,6 @@ class Registrar_Roles_Activity : AppCompatActivity(),RolesAdaptadorListener {
     fun AgregarRol(roles: Roles){
         lifecycleScope.launch {
             DB.ObtenerDB(this@Registrar_Roles_Activity).RolesDao().InsertarRol(roles)
-            ObtenerRoles()
             LimpiaCampos()
         }
     }

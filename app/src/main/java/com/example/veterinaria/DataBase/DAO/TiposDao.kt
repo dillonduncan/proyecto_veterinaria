@@ -13,6 +13,8 @@ interface TiposDao {
     suspend fun ObtenerNombreTipo():MutableList<String>*/
    /* @Query("SELECT ${Tipos.COL_NAME} WHERE ${Tipos.COL_ID}=:idTipo")
     suspend fun ObtenerNombreTipo_id(idTipo:Long):String*/
+    @Query("SELECT ${Tipos.COL_NAME} FROM ${Tipos .TABLE_NAME} WHERE ${Tipos.COL_ID}=:idMascotaTp")
+    suspend fun GetNameIdTipoMasct(idMascotaTp:Long):String
     @Insert
     suspend fun AgregarTipo(vararg tipo: Tipos)
     @Query("DELETE FROM tabla_tipos WHERE ID=:id")

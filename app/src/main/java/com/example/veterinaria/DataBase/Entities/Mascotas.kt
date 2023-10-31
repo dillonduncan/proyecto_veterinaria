@@ -26,7 +26,7 @@ data class Mascotas(
     @ColumnInfo(name = COL_FECHA_NACIMIENTO)var fecha_nacimiento:String,
     @ColumnInfo(name = COL_TIPOID)var tipo_mascota_id:Long,
     @ColumnInfo(name = COL_RAZAID)var raza_mascota_id:Long,
-    @ColumnInfo(name = COL_ID_DUEÑO)var dueño_mascota:Long
+    @ColumnInfo(name = COL_ID_DUEÑO)var dueño_mascota:String
 ){
     override fun toString(): String {
         return "$nombre_mascota"

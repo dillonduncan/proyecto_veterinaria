@@ -11,14 +11,15 @@ import kotlinx.coroutines.launch
 
 class Registros_Principal_Activity : AppCompatActivity() {
     lateinit var binding: ActivityRegistrosPrincipalBinding
-    var idRolUsuario:Long=0
     var idAdmin:Long=0
     var idUser:Long=0
+    var nameRol=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrosPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ObtenerValidarRolUsuario()
+        LlenarDatosUser()
         RegistroMascota()
         RegistroRaza()
         RegistroTipo()
@@ -26,16 +27,14 @@ class Registros_Principal_Activity : AppCompatActivity() {
         RegistroRoles()
         RegistroUsuario()
         RegistrarControles()
-        LlenarDatosUser()
         CerrarSesion()
     }
     fun ObtenerValidarRolUsuario(){
-        idRolUsuario=login_Activity.idRolUsuario
         lifecycleScope.launch {
             idAdmin=DB.ObtenerDB(this@Registros_Principal_Activity).RolesDao().ObtenerIdRolForName("Administrador")
             idUser=DB.ObtenerDB(this@Registros_Principal_Activity).RolesDao().ObtenerIdRolForName("Usuario")
         }
-        if (idRolUsuario==idUser){
+        if (login_Activity.usuario.id_rol.toInt()!=1){
             binding.btnRegistrarRoles.isEnabled = false
             binding.btnRegistrarUsuarios.isEnabled=false
         }

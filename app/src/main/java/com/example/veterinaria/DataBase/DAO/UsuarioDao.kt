@@ -7,12 +7,15 @@ import com.example.veterinaria.DataBase.Entities.Usuario
 
 @Dao
 interface UsuarioDao {
-    @Query("SELECT id FROM tabla_usuario WHERE ${Usuario.COL_ID}=:idRol")
-    suspend fun ObtenerIdRolForId(idRol: Long):Long
-    @Query("SELECT * FROM tabla_usuario WHERE id=:idUser")
+    @Query("SELECT ${Usuario.COL_IDROL} FROM tabla_usuario WHERE ${Usuario.COL_ID}=:idUser")
+    suspend fun ObtenerIdRolForId(idUser: Long):Long
+    @Query("SELECT * FROM ${Usuario.TABLE_NAME} WHERE ${Usuario.COL_ID}=:idUser")
     suspend fun ObtenerUsuarioForid(idUser: Long): Usuario
+    //que me obtenga el id de la contrasena dependiendo del id del usuario obtenido si es igual al de la contrasena
     @Query("SELECT id FROM tabla_usuario WHERE contraseña=:contra")
     suspend fun ObtenerIdContraseña(contra: Int): Long
+    @Query("SELECT id FROM tabla_usuario WHERE contraseña=:contra & ${Usuario.COL_ID}=:idUser")
+    suspend fun ObtenerIdContraseñaForidUser(contra: Int,idUser:Int): Long
     @Query("SELECT id FROM tabla_usuario WHERE nombre_usuario=:nombre")
     suspend fun ObtenerIdNombre(nombre: String): Long
     @Query("SELECT * FROM tabla_usuario")

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.veterinaria.DataBase.DB
 import com.example.veterinaria.DataBase.Entities.Mascotas
 import com.example.veterinaria.R
+import com.example.veterinaria.Registro_Mascota_Activity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -32,12 +33,12 @@ class MascotaAdaptador(
             tipo= DB.ObtenerDB(holder.txtTipo.context).TiposDao().ObtenerNombreTipo_id(mascota.tipo_mascota_id)
             raza=DB.ObtenerDB(holder.txtTipo.context).RazaDao().ObtenerNombreRaza_Id(mascota.raza_mascota_id)
         }*/
-        holder.txtIdmsct.text=mascota.id.toString()
-        holder.txtNombre.text=mascota.nombre_mascota
-        holder.txtTipo.text=mascota.tipo_mascota_id.toString()
-        holder.txtRaza.text=mascota.raza_mascota_id.toString()
-        holder.txtFecha_Nacimiento.text=mascota.fecha_nacimiento
-        holder.txtDueño.text=mascota.dueño_mascota.toString()
+        holder.txtIdmsct.text="ID: "+mascota.id.toString()
+        holder.txtNombre.text="Nombre: "+mascota.nombre_mascota
+        holder.txtTipo.text="Tipo: "+ mascota.tipo_mascota_id //Registro_Mascota_Activity.tipoMascota
+        holder.txtRaza.text="Raza: "+ mascota.raza_mascota_id //Registro_Mascota_Activity.razaMascota
+        holder.txtFecha_Nacimiento.text="Nacimiento: "+mascota.fecha_nacimiento
+        holder.txtDueño.text="Dueño: "+mascota.dueño_mascota
         holder.cvMascotas.setOnClickListener {
             listener.onEditItemClick(mascota)
         }

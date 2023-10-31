@@ -15,6 +15,8 @@ interface RazaDao {
     suspend fun ObtenerRazas():MutableList<String>*/
    /* @Query("SELECT * FROM tabla_razas")
     suspend fun hsdh():MutableList<Razas>*/
+    @Query("SELECT ${Razas.COL_NAME} FROM ${Razas.TABLE_NAME} WHERE ${Razas.COL_ID}=:idMascotaRZ")
+    suspend fun GetNameIdRazaMasct(idMascotaRZ:Long):String
     @Query("SELECT * FROM tabla_razas WHERE tipo_Raza_id=:tipoRz")
     suspend fun ObtenerRaza_Tipo(vararg tipoRz:Long):MutableList<Razas>
     @Insert

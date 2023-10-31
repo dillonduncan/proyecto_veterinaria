@@ -41,6 +41,17 @@ class Registro_Mascota_Activity : AppCompatActivity(),MascotaAdaptadorListener {
         binding.rvMascota.layoutManager=LinearLayoutManager(this)
         binding.btnMostrar.setOnClickListener { ObtenerMascota() }
         binding.btnAtras.setOnClickListener { startActivity(Intent(this@Registro_Mascota_Activity,Registros_Principal_Activity::class.java)) }
+      // ObtenerDatosMascotas()
+    }
+    fun ObtenerDatosMascotas(){
+        lifecycleScope.launch {
+            razaMascota=DB.ObtenerDB(this@Registro_Mascota_Activity).RazaDao().GetNameIdRazaMasct(mascotas.raza_mascota_id)
+            tipoMascota=DB.ObtenerDB(this@Registro_Mascota_Activity).TiposDao().GetNameIdTipoMasct(mascotas.tipo_mascota_id)
+        }
+    }
+    companion object{
+        var tipoMascota:String=""
+        var razaMascota:String=""
     }
     fun ValidarGuardar(){
         binding.btnAgregarMsct.setOnClickListener {
@@ -58,7 +69,7 @@ class Registro_Mascota_Activity : AppCompatActivity(),MascotaAdaptadorListener {
                    binding.edtfechaNacmtMascota.text.toString(),
                    tipoSelect.id,
                    RazaSelect.id_raza,
-                   login_Activity.usuario.id
+                   login_Activity.usuario.nombre
                    )
                AgregarMascota(mascotas)
                Toast.makeText(this, "Guardo con exito", Toast.LENGTH_SHORT).show()

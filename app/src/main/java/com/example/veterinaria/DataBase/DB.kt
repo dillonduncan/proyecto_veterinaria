@@ -22,7 +22,7 @@ import com.example.veterinaria.DataBase.Entities.Tipos
 import com.example.veterinaria.DataBase.Entities.Usuario
 import com.example.veterinaria.DataBase.Entities.Vacunas
 
-@Database(entities = [Tipos::class,Vacunas::class,Roles::class,Usuario::class,Razas::class,Mascotas::class,ControlVacunas::class], version = 10)
+@Database(entities = [Tipos::class,Vacunas::class,Roles::class,Usuario::class,Razas::class,Mascotas::class,ControlVacunas::class], version = 11)
 abstract class DB:RoomDatabase() {
     abstract fun TiposDao():TiposDao
     abstract fun VacunasDao():VacunasDao

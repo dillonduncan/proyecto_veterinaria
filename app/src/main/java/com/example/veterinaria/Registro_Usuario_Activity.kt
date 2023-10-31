@@ -27,10 +27,14 @@ class Registro_Usuario_Activity : AppCompatActivity(),UsuariosAdaptadorListener 
         super.onCreate(savedInstanceState)
         binding=ActivityRegistroUsuarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        if (login_Activity.valRegistro==1){
+            binding.btnVerRegistros.isEnabled=false
+        }
         binding.rvUsuarios.layoutManager=LinearLayoutManager(this)
         LlenarSPRoles()
         ValidarGuardar()
         binding.btnVerRegistros.setOnClickListener { ObtenerUsuario() }
+        login_Activity.valRegistro=0
     }
     fun ValidarGuardar(){
         binding.btnRegistrar.setOnClickListener {
