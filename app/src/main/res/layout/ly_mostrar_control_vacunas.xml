@@ -24,21 +24,29 @@
                 android:padding="5dp"
                 android:fontFamily="@font/lilita"/>
             <TextView
+                android:id="@+id/txtMascotaControl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:fontFamily="@font/lilita"
                 android:gravity="center"
                 android:hint="Mascota"
                 android:padding="5dp"/>
 
             <TextView
-
+                android:id="@+id/txtVacunaControl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lilita"
                 android:gravity="center"
                 android:hint="Vacuna"
+                android:padding="5dp" />
+            <TextView
+                android:id="@+id/txtFechaControl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lilita"
+                android:gravity="center"
+                android:hint="Fecha"
                 android:padding="5dp" />
             <Button
                 android:id="@+id/btnBorrarControl"

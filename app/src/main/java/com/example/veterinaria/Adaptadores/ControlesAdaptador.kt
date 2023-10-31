@@ -21,8 +21,9 @@ class ControlesAdaptador(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var control=listaControles[position]
         holder.txtId.text=control.id.toString()
-        //holder.txtVacuna.text=control.vacunaid.toString()
-        //holder.txtMascota.text=control.mascotaid.toString()
+        holder.txtVacuna.text=control.vacunaid.toString()
+        holder.txtMascota.text=control.mascotaid.toString()
+        holder.txtFecha.text=control.fecha
         holder.btnBorrarControl.setOnClickListener {
             listener.onDeleteItemClick(control)
         }
@@ -33,8 +34,9 @@ class ControlesAdaptador(
     inner class ViewHolder(ItemView: View):RecyclerView.ViewHolder(ItemView) {
         val cvControl=ItemView.findViewById<CardView>(R.id.cvControles)
         val txtId=ItemView.findViewById<TextView>(R.id.txtIdControl)
-       // val txtMascota=ItemView.findViewById<TextView>(R.id.txtMascota)
-        //val txtVacuna=ItemView.findViewById<TextView>(R.id.txtVacuna)
+        val txtMascota=ItemView.findViewById<TextView>(R.id.txtMascotaControl)
+        val txtVacuna=ItemView.findViewById<TextView>(R.id.txtVacunaControl)
+        val txtFecha=itemView.findViewById<TextView>(R.id.txtFechaControl)
         val btnBorrarControl=ItemView.findViewById<Button>(R.id.btnBorrarControl)
     }
 }

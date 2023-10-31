@@ -3,14 +3,13 @@ package com.example.veterinaria
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.example.veterinaria.DataBase.DB
-import com.example.veterinaria.DataBase.Entities.Roles
 import com.example.veterinaria.DataBase.Entities.Usuario
 import com.example.veterinaria.databinding.ActivityLoginBinding
 import kotlinx.coroutines.launch
-import kotlin.math.log
+import java.text.SimpleDateFormat
+import java.util.Date
 
 class login_Activity : AppCompatActivity() {
     lateinit var listUsuarios: List<Usuario>
