@@ -26,11 +26,10 @@ class login_Activity : AppCompatActivity() {
         setContentView(binding.root)
         binding.btnIniciarSecion.setOnClickListener { ObtenerUsuarios() }
         binding.txtRegistrarce.setOnClickListener {
-            valRegistro=1
             startActivity(
                 Intent(
                     this,
-                    Registro_Usuario_Activity::class.java
+                    Registrarce_Usuario_Activity::class.java
                 )
             )
         }
@@ -91,6 +90,5 @@ class login_Activity : AppCompatActivity() {
     companion object {
         lateinit var usuario: Usuario
         var idRolUsuario: Long = 0
-        var valRegistro=0
     }
 }
