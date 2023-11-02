@@ -83,7 +83,6 @@ class Registrar_Roles_Activity : AppCompatActivity(),RolesAdaptadorListener {
             Toast.makeText(this@Registrar_Roles_Activity, "Eliminado con Exito", Toast.LENGTH_SHORT).show()
         }
     }
-
     override fun onEditItemClick(roles: Roles) {
         binding.btnAgregarRoles.setText("Actualizar")
         this.roles=roles

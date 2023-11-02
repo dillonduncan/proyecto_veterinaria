@@ -145,6 +145,6 @@ class Registro_Usuario_Activity : AppCompatActivity(),UsuariosAdaptadorListener 
         this.usuarios=usuario
         binding.edtNombreUsuario.setText(this.usuarios.nombre)
         binding.edtCorreoUsuario.setText(this.usuarios.correo)
-        binding.edtContraseA.setText(this.usuarios.contrasena)
+        binding.edtContraseA.setText(this.usuarios.contrasena.toString())
     }
 }

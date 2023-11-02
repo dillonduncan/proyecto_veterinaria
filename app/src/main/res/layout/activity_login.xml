@@ -22,11 +22,15 @@
         android:layout_marginStart="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <EditText
             android:id="@+id/edtUsuario"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Usuario" />
+            android:hint="Usuario"
+            android:drawableLeft="@drawable/baseline_account_circle_24"
+            android:drawablePadding="5dp"
+            android:paddingStart="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_marginTop="25dp"
@@ -39,7 +43,10 @@
         android:inputType="numberPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Contraseña" />
+        android:hint="Contraseña"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:drawablePadding="5dp"
+        android:paddingStart="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/txtLogIncorretco"
@@ -50,14 +57,16 @@
         android:textSize="20dp"
         android:layout_marginTop="5dp"
         android:textColor="#FF0000"/>
+
     <Button
+        android:id="@+id/btnIniciarSecion"
+        style="@style/btn_style_blue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Iniciar secion"
-        android:id="@+id/btnIniciarSecion"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"/>
+        android:text="Iniciar secion" />
     <TextView
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"

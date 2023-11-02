@@ -39,6 +39,7 @@
             android:id="@+id/edtNombre_Mascota"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:drawableLeft="@drawable/huella_removebg_preview__1_"
             android:fontFamily="@font/lilita"
             android:hint="Nombre de mascota" />
     </com.google.android.material.textfield.TextInputLayout>
