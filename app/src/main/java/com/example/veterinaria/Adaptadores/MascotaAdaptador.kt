@@ -29,10 +29,6 @@ class MascotaAdaptador(
         val mascota=listamascota[position]
         var tipo="0"
         var raza="0"
-       /* CoroutineScope(Dispatchers.IO).launch {
-            tipo= DB.ObtenerDB(holder.txtTipo.context).TiposDao().ObtenerNombreTipo_id(mascota.tipo_mascota_id)
-            raza=DB.ObtenerDB(holder.txtTipo.context).RazaDao().ObtenerNombreRaza_Id(mascota.raza_mascota_id)
-        }*/
         holder.txtIdmsct.text="ID: "+mascota.id.toString()
         holder.txtNombre.text="Nombre: "+mascota.nombre_mascota
         holder.txtTipo.text="Tipo: "+ mascota.tipo_mascota_id //Registro_Mascota_Activity.tipoMascota

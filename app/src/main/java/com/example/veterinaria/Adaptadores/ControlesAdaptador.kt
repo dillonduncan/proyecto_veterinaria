@@ -9,6 +9,8 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.veterinaria.DataBase.Entities.ControlVacunas
 import com.example.veterinaria.R
+import com.example.veterinaria.Registro_Mascota_Activity
+
 class ControlesAdaptador(
     val listaControles:MutableList<ControlVacunas>,
     val listener: ControlesAdaptadorListener
@@ -30,6 +32,7 @@ class ControlesAdaptador(
         holder.cvControl.setOnClickListener {
             listener.onEditItemClick(control)
         }
+        Registro_Mascota_Activity.lisMascota
     }
     inner class ViewHolder(ItemView: View):RecyclerView.ViewHolder(ItemView) {
         val cvControl=ItemView.findViewById<CardView>(R.id.cvControles)
