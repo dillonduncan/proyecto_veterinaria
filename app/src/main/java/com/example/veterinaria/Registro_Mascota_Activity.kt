@@ -48,17 +48,6 @@ class Registro_Mascota_Activity : AppCompatActivity(), MascotaAdaptadorListener 
                 )
             )
         }
-         //ObtenerDatosMascotas()
-    }
-
-    fun ObtenerDatosMascotas() {
-        lifecycleScope.launch {
-            lisMascota = DB.ObtenerDB(this@Registro_Mascota_Activity).MascotaDao().ObtenerTodoMascotas()
-        }
-    }
-
-    companion object {
-        lateinit var lisMascota:MutableList<Mascotas>
     }
 
     fun ValidarGuardar() {
