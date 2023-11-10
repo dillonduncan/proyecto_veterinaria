@@ -32,7 +32,7 @@ class ControlesAdaptador(
         holder.cvControl.setOnClickListener {
             listener.onEditItemClick(control)
         }
-        Registro_Mascota_Activity.lisMascota
+
     }
     inner class ViewHolder(ItemView: View):RecyclerView.ViewHolder(ItemView) {
         val cvControl=ItemView.findViewById<CardView>(R.id.cvControles)
