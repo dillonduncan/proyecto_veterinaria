@@ -8,6 +8,20 @@
     tools:context=".Registro_Mascota_Activity">
 
 
+    <Button
+        android:id="@+id/btnControlVacunas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/lilita"
+        android:text="Controles"
+        app:layout_constraintBottom_toTopOf="@+id/rv_Mascota"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spRazas"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView"
@@ -100,9 +114,10 @@
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/lilita"
         android:text="Agregar"
+        android:layout_marginLeft="10dp"
         app:layout_constraintBottom_toTopOf="@+id/rv_Mascota"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spRazas" />
 
@@ -114,12 +129,13 @@
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/lilita"
         android:text="Ver Registros"
+        android:layout_marginRight="10dp"
         app:layout_constraintBottom_toTopOf="@+id/rv_Mascota"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spRazas"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_Mascota"

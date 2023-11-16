@@ -48,8 +48,9 @@ class Registro_Mascota_Activity : AppCompatActivity(), MascotaAdaptadorListener 
                 )
             )
         }
+        RegistrarControles()
     }
-
+    fun RegistrarControles()=binding.btnControlVacunas.setOnClickListener { startActivity(Intent(this@Registro_Mascota_Activity,Registrar_Control_Vacunas_Activity::class.java)) }
     fun ValidarGuardar() {
         binding.btnAgregarMsct.setOnClickListener {
             if (binding.edtNombreMascota.text.isNullOrEmpty()) {
