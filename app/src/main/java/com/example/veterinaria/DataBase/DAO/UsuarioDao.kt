@@ -18,6 +18,8 @@ interface UsuarioDao {
     suspend fun ObtenerIdContraseñaForidUser(contra: Int,idUser:Int): Long
     @Query("SELECT id FROM tabla_usuario WHERE nombre_usuario=:nombre")
     suspend fun ObtenerIdNombre(nombre: String): Long
+    @Query("SELECT nombre_usuario FROM tabla_usuario")
+    suspend fun ObtenerNombreUsuarios():List<String>
     @Query("SELECT * FROM tabla_usuario")
     suspend fun ObtenerTodoUsuario(): MutableList<Usuario>
     @Insert

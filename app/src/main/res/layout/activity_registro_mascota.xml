@@ -53,9 +53,11 @@
             android:id="@+id/edtNombre_Mascota"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:drawableLeft="@drawable/huella_removebg_preview__1_"
+            android:drawableLeft="@drawable/baseline_pets_24azul"
+            android:drawablePadding="5dp"
             android:fontFamily="@font/lilita"
-            android:hint="Nombre de mascota" />
+            android:hint="Nombre de mascota"
+            android:paddingStart="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -75,6 +77,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/lilita"
+            android:paddingStart="10dp"
+            android:drawableLeft="@drawable/baseline_edit_calendar_24"
+            android:drawablePadding="5dp"
             android:hint="Fecha de Nacimiento"
             android:inputType="datetime"
             android:maxLength="10" />
@@ -110,11 +115,11 @@
         android:id="@+id/btnAgregarMsct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/lilita"
         android:text="Agregar"
-        android:layout_marginLeft="10dp"
         app:layout_constraintBottom_toTopOf="@+id/rv_Mascota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -126,10 +131,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/lilita"
         android:text="Ver Registros"
-        android:layout_marginRight="10dp"
         app:layout_constraintBottom_toTopOf="@+id/rv_Mascota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -142,14 +147,14 @@
         android:layout_width="match_parent"
         android:layout_height="380dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:elevation="20dp"
         android:scrollbars="vertical"
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/btnAgregarMsct"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregarMsct"
         tools:listitem="@layout/ly_mostra_mascotas" />
 
     <ImageView

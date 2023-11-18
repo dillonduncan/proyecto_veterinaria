@@ -7,11 +7,22 @@
     tools:context=".Registros_Principal_Activity">
 
     <ImageView
+        android:id="@+id/btnRegistrarRoles"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/baseline_account_circle_24"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegistrarUsuarios"
+        app:layout_constraintStart_toStartOf="@+id/btnRegistrarUsuarios"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarUsuarios" />
+
+    <ImageView
         android:id="@+id/btnRegistrarUsuarios"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginTop="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/baseline_group_add_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCerrarSesion" />
@@ -58,24 +69,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="80dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/btnRegistrarRoles"
-            style="@style/btn_style_blue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:width="250dp"
-            android:height="60dp"
-            android:text="Registrar Roles"
-            tools:layout_editor_absoluteX="101dp"
-            tools:layout_editor_absoluteY="74dp" />
 
 
         <Button
@@ -83,9 +82,12 @@
             style="@style/btn_style_blue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="10dp"
             android:width="250dp"
             android:height="60dp"
+            android:drawableLeft="@drawable/baseline_pets_24"
+            android:paddingStart="20dp"
+            android:paddingEnd="45dp"
             android:text="Registrar Mascotas"
             tools:layout_editor_absoluteX="101dp"
             tools:layout_editor_absoluteY="74dp" />
@@ -95,9 +97,12 @@
             style="@style/btn_style_blue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="10dp"
             android:width="250dp"
             android:height="60dp"
+            android:drawableLeft="@drawable/baseline_pets_24"
+            android:paddingStart="20dp"
+            android:paddingEnd="25dp"
             android:text="Registrar Tipos Mascotas"
             tools:layout_editor_absoluteX="101dp"
             tools:layout_editor_absoluteY="74dp" />
@@ -107,9 +112,12 @@
             style="@style/btn_style_blue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="10dp"
             android:width="250dp"
             android:height="60dp"
+            android:drawableLeft="@drawable/baseline_pets_24"
+            android:paddingStart="20dp"
+            android:paddingEnd="25dp"
             android:text="Registrar Raza Mascotas"
             tools:layout_editor_absoluteX="101dp"
             tools:layout_editor_absoluteY="74dp" />
@@ -121,6 +129,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:width="250dp"
+            android:drawableLeft="@drawable/baseline_vaccines_24"
+            android:paddingStart="20dp"
+            android:paddingEnd="45dp"
             android:height="60dp"
             android:text="Registrar Vacunas"
             tools:layout_editor_absoluteX="101dp"
@@ -128,4 +139,15 @@
 
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="-4dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnRegistrarRoles"
+        app:layout_constraintStart_toEndOf="@+id/btnRegistrarRoles"
+        app:layout_constraintTop_toTopOf="@+id/btnRegistrarRoles"
+        app:srcCompat="@drawable/baseline_settings_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
