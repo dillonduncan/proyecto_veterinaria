@@ -24,6 +24,7 @@ class Registro_Tipos_Activity : AppCompatActivity(),TiposAdaptadorListener {
         setContentView(binding.root)
         binding.rvTipoMascota.layoutManager= LinearLayoutManager(this)
         ValidarGuardar()
+        binding.btnVerRegistros.setOnClickListener { ObtenerTipo() }
         binding.btnAtras.setOnClickListener { startActivity(Intent(this@Registro_Tipos_Activity,Registros_Principal_Activity::class.java)) }
     }
     fun ValidarGuardar(){

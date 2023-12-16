@@ -3,6 +3,7 @@ package com.example.veterinaria
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.view.marginLeft
 import androidx.lifecycle.lifecycleScope
 import com.example.veterinaria.DataBase.DB
 import com.example.veterinaria.databinding.ActivityRegistroVacunasBinding

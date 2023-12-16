@@ -18,6 +18,7 @@ class Registrar_Roles_Activity : AppCompatActivity(),RolesAdaptadorListener {
     lateinit var listaRoles:MutableList<Roles>
     lateinit var adaptador:RolesAdaptador
     lateinit var roles:Roles
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityRegistrarRolesBinding.inflate(layoutInflater)
