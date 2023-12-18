@@ -3,9 +3,11 @@ package com.example.veterinaria
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.view.marginLeft
 import androidx.lifecycle.lifecycleScope
 import com.example.veterinaria.DataBase.DB
+import com.example.veterinaria.SharedPreferens.Shared.Companion.prefs
 import com.example.veterinaria.databinding.ActivityRegistroVacunasBinding
 import com.example.veterinaria.databinding.ActivityRegistrosPrincipalBinding
 import kotlinx.coroutines.launch
@@ -19,6 +21,7 @@ class Registros_Principal_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrosPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        Toast.makeText(this, "${prefs.getUserName()}", Toast.LENGTH_SHORT).show()
         ObtenerValidarRolUsuario()
         LlenarDatosUser()
         RegistroMascota()
@@ -44,8 +47,8 @@ class Registros_Principal_Activity : AppCompatActivity() {
     }
 
     fun LlenarDatosUser() {
-        binding.txtNombreUsuario.text = login_Activity.usuario.nombre
-        binding.txtCorreoUsuario.text = login_Activity.usuario.correo
+        binding.txtNombreUsuario.text = prefs.getUserName()
+        binding.txtCorreoUsuario.text = prefs.getUserMail()
     }
 
     fun CerrarSesion() {
